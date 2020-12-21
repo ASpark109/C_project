@@ -22,6 +22,48 @@ struct binary_tree* init()
     return New_node;
 }
 
+int search(int x)
+{
+    ptr = head;
+    
+    if (ptr == NULL)
+    {
+        printf("Tree is empty\n");
+        return 0;
+    }
+
+    while (1)
+    {
+        if (x > ptr->value)
+        {
+            ptr = ptr->right;
+            if (ptr == NULL)
+            {
+                printf("Not find - %d\n", x);
+                return 0;
+            }
+            
+        }
+
+        if (x < ptr->value)
+        {
+            ptr = ptr->left;
+            if (ptr == NULL)
+            {
+                printf("Not find - %d\n", x);
+                return 0;
+            }
+        }
+
+        if(x == ptr->value)
+        {
+            printf("find - %d\n", ptr->value);
+            return 0;
+        }
+    }
+    
+}
+
 int insert(int n)
 {
     ptr = head;
@@ -78,7 +120,7 @@ int insert(int n)
 
 int main()
 {
-    insert(50);
+    /*insert(50);
     printf("\n");
     insert(70);
     printf("\n");
@@ -90,4 +132,16 @@ int main()
     printf("\n");
     insert(90);
     printf("\n");
+*/
+    search(50);
+    search(70);
+    search(10);
+    search(25);
+    search(65);
+    search(90);
+    search(24);
+    search(1);
+    search(51);
+    search(0);
+    search(111);
 }
