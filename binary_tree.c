@@ -22,6 +22,21 @@ struct binary_tree* init()
     return New_node;
 }
 
+void show_tree(struct binary_tree* root)
+{
+    if (root->left != NULL)
+    {
+        show_tree(root->left);
+    }
+
+    if (root->right != NULL)
+    {
+        show_tree(root->right);
+    }
+
+    printf("%d\n", root->value);
+}
+
 int search(int x)
 {
     ptr = head;
@@ -120,28 +135,26 @@ int insert(int n)
 
 int main()
 {
-    /*insert(50);
+    insert(5);
     printf("\n");
-    insert(70);
+    insert(6);
+    printf("\n");
+    insert(4);
+    printf("\n");
+    insert(7);
+    printf("\n");
+    insert(3);
+    printf("\n");
+    insert(8);
+    printf("\n");
+    insert(2);
+    printf("\n");
+    insert(9);
+    printf("\n");
+    insert(1);
     printf("\n");
     insert(10);
     printf("\n");
-    insert(25);
-    printf("\n");
-    insert(65);
-    printf("\n");
-    insert(90);
-    printf("\n");
-*/
-    search(50);
-    search(70);
-    search(10);
-    search(25);
-    search(65);
-    search(90);
-    search(24);
-    search(1);
-    search(51);
-    search(0);
-    search(111);
+
+    show_tree(head);
 }
