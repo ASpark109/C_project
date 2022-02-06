@@ -7,7 +7,9 @@ The projects will mostly deal with working with:
 4) Algorithms;
 5) Cryptography;
 6) Programming on the Arduino platform.
+
 hello
+
 I'm relatively new to programming, so I understand that for more experienced dudes my code will be mostly disgusting, so please leave a comment, I'll be happy for any feedback :)
 
 Hardware platform information: gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
